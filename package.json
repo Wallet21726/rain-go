@@ -1,0 +1,14 @@
+{
+  "name": "rain-go",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "build": "pnpm --filter @rain-go/web build",
+    "dev:web": "pnpm --filter @rain-go/web dev",
+    "dev": "pnpm build && pnpm --filter @rain-go/worker dev",
+    "deploy": "pnpm build && pnpm --filter @rain-go/worker deploy"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

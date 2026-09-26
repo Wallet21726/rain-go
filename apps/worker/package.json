@@ -1,0 +1,29 @@
+{
+  "name": "@rain-go/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc -p .",
+    "test": "echo 'worker: covered by smoke test (pnpm smoke)'",
+    "cf-typegen": "wrangler types",
+    "smoke": "node scripts/smoke.mjs",
+    "seed": "node scripts/seed-demo.mjs",
+    "ai-pass": "node scripts/ai-pass.mjs",
+    "all-games": "node scripts/all-games.mjs"
+  },
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "@rain-go/engine": "workspace:*",
+    "hono": "^4.13.9",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260926.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.141.0"
+  }
+}

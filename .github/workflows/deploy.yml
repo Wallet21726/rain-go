@@ -33,4 +33,4 @@ jobs:
           test -n "$GAME_ACCESS_TOKEN"
           printf '%s' "$GAME_ACCESS_TOKEN" | pnpm --filter @rain-go/worker exec wrangler secret put ACCESS_TOKEN
       - name: Deploy
-        run: pnpm --filter @rain-go/worker deploy
+        run: pnpm --filter @rain-go/worker exec wrangler deploy
